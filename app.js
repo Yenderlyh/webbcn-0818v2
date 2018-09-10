@@ -1,14 +1,14 @@
 'use strict';
 
-var express = require('express');
-var path = require('path');
-var logger = require('morgan');
-var mongoose = require('mongoose');
+const express = require('express');
+const path = require('path');
+const logger = require('morgan');
+const mongoose = require('mongoose');
 
-var index = require('./routes/index');
+const index = require('./routes/index');
 
 // -- App init
-var app = express();
+const app = express();
 
 // -- Connect to DB
 mongoose.connect('mongodb://localhost/cohort0818', {
