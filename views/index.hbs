@@ -1,0 +1,45 @@
+<main id="site-main" class="container">
+  <section class="section expandable">
+    <h2 class="handler">
+      Students
+      <span class="expand">+</span>
+      <span class="collapse">-</span>
+    </h2>
+    <ul class="content">
+      {{#each students}}
+      <li>
+        <a href="{{this.url}}">{{this.name}}</a>
+        <strong>{{this.country}}</strong>
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+
+  <section class="section expandable links">
+    <h2 class="handler">
+      Links
+      <span class="expand">+</span>
+      <span class="collapse">-</span>
+    </h2>
+    <ul class="content">
+      <li>
+        <a href="https://drive.google.com/drive/folders/1DLqFphw9XAj9xJR16v1shlNTmmDGP3I7">Google Drive 2018 08</a>
+      </li>
+      <li>
+        <a href="https://docs.google.com/presentation/d/1p_t34zwQQ2Z_dm-6Sd5RHGEe7jTX4GPNy-GTgV8G_yg/edit?usp=sharing">Class
+          Guidelines</a>
+      </li>
+      <li>
+        <a href="https://docs.google.com/presentation/d/1c3wM1W8wBJA4jAw9fqkw3YCud-O1ov1FATJ1l09AW5Q/edit?usp=sharing">Course
+          Overview</a>
+      </li>
+      <li>
+        <a href="https://github.com/ironhack/bcn-webdev-cheatsheet">Cheat Sheet</a>
+      </li>
+      <li>
+        <a href="https://docs.google.com/presentation/d/1gRTQr_Pbap2nV2wWvqkyaTjFOt-FcmaULiHLcpX3Ufc/edit?usp=sharing">Module
+          1</a>
+      </li>
+    </ul>
+  </section>
+</main>
