@@ -1,5 +1,6 @@
 'use strict';
 
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const logger = require('morgan');
@@ -11,7 +12,7 @@ const index = require('./routes/index');
 const app = express();
 
 // -- Connect to DB
-mongoose.connect('mongodb://localhost/cohort0818', {
+mongoose.connect(process.env.MONGODB_URI, {
   keepAlive: true,
   reconnectTries: Number.MAX_VALUE
 });
