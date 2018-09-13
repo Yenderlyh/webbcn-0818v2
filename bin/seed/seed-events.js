@@ -10,11 +10,13 @@ mongoose.connect('mongodb://localhost/webbcn0818v2')
     console.log('Connected to Mongo!');
     return Event.remove({});
   })
-  .then(() => {
+  .then((result) => {
+    console.log('Empty db');
     return Event.insertMany(data);
   })
   .then((results) => {
     console.log('You have some events', results.length);
+    mongoose.connection.close();
   })
   .catch(() => {
     console.log('There is a problem');
