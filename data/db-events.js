@@ -25,15 +25,14 @@ const data = [{
 mongoose.connect('mongodb://localhost/webbcn0818v2')
   .then(() => {
     console.log('Connected to Mongo!');
+    return Event.remove({});
   })
-  .catch(() => {
-    console.log('There is a problem');
-  });
-
-Event.insertMany(data)
+  .then(() => {
+    return Event.insertMany(data);
+  })
   .then((results) => {
     console.log('You have some events', results.length);
   })
-  .catch((err) => {
-    console.log('You\'re a lonely person', err);
+  .catch(() => {
+    console.log('There is a problem');
   });
