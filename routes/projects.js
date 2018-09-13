@@ -18,4 +18,31 @@ router.get('/', (req, res, next) => {
     });
 });
 
+router.get('/create', (req, res, next) => {
+  const formData = req.flash('project-form-data');
+  const formErrors = req.flash('project-form-error');
+  const data = {
+    message: formErrors[0],
+    fields: formData[0]
+  };
+  res.render('project-create', data);
+});
+
+router.post('/create', (req, res, next) => {
+  const { name, studentName, presentationURL, projectURL, imageURL } = req.body;
+
+  if (!name || !studentName || !presentationURL || !projectURL || !imageURL) {
+    req.flash('project-form-error', 'all fields are mandatory');
+    req.flash('project-form-data', { name, studentName, presentationURL, projectURL, imageURL });
+    return res.redirect('/projects/create');
+  }
+
+  const project = new Project({ name, studentName, presentationURL, projectURL, imageURL });
+  project.save()
+    .then(() => {
+      res.redirect('/projects');
+    })
+    .catch(next);
+});
+
 module.exports = router;
