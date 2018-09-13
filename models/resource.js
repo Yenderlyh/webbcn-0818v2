@@ -14,7 +14,8 @@ const resourceSchema = new Schema({
   },
   category: {
     type: String,
-    enum: ['documentation', 'exercises', 'events']
+    enum: ['documentation', 'exercises', 'events'],
+    required: true
   }
 });
 

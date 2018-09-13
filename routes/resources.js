@@ -7,7 +7,7 @@ const Resource = require('../models/resource');
 router.get('/', (req, res, next) => {
   Resource.find({})
     .then((result) => {
-      const data = {links: result};
+      const data = {resources: result};
       res.render('resources', data);
     })
   .catch(next);
