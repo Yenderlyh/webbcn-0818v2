@@ -7,7 +7,11 @@ const data = require('../../data/events.js');
 
 const Event = require('../../models/events.js');
 
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI, {
+  keepAlive: true,
+  useNewUrlParser: true,
+  reconnectTries: Number.MAX_VALUE
+})
   .then(() => {
     console.log('Connected to Mongo!');
     return Event.remove({});
