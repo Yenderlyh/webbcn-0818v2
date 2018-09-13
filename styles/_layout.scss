@@ -1,13 +1,11 @@
 #site-header {
+  @include inverse();
   padding: 30px 0;
-  color: white;
-  background: #111;
 }
 
 #site-footer {
-  color: white;
+  @include inverse();
   padding: 60px 0;
-  background: #111;
 }
 
 #site-main {

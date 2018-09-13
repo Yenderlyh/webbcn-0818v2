@@ -1,31 +1,36 @@
-.expandable .handler {
-  cursor: pointer;
+.expandable {
+  .handler {
+    cursor: pointer;
+  }
+  
+  .expand {
+    display: inline;
+  }
+  
+  .collapse {
+    display: none;
+  }
+  
+  .handler:hover {
+    background-color: #ccc;
+  }
+  
+  .content {
+    display: none;
+  }
+  
+  &.expanded {
+    .content {
+      display: block;
+    }
+    
+    .expand {
+      display: none;
+    }
+    
+    .collapse {
+      display: inline;
+    }
+  } 
 }
 
-.expandable .expand {
-  display: inline;
-}
-
-.expandable .collapse {
-  display: none;
-}
-
-.expandable .handler:hover {
-  background-color: #ccc;
-}
-
-.expandable .content {
-  display: none;
-}
-
-.expandable.expanded .content {
-  display: block;
-}
-
-.expandable.expanded .expand {
-  display: none;
-}
-
-.expandable.expanded .collapse {
-  display: inline;
-}
