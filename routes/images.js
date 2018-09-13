@@ -34,7 +34,7 @@ router.post('/create', uploadCloud.single('photo'), (req, res, next) => {
   const url = req.file.url;
   const image = new Image({ title, category, url });
   image.save()
-    .then(movie => {
+    .then(() => {
       res.redirect('/images');
     })
     .catch(next);
