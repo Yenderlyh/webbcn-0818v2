@@ -3,11 +3,8 @@
   <ul class="card-container">
     {{#each events}}
       <li class="card">
-        <ul>
-          <p>{{this.type}}</p>
-          <h3>{{this.name}}</h3>
-          <p>{{this.date}}</p>
-        </ul>
+        <h3><span class="type">{{this.type}}</span> <span class="name">{{this.name}}</span></h3>
+        <p>{{this.date}}</p>
       </li>
     {{/each}}
   </ul>
