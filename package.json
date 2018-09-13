@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "start-dev": "nodemon ./bin/www"
+    "start-dev": "nodemon ./bin/www",
+    "seed-events": "node ./bin/seed/seed-events.js"
   },
   "engines": {
     "node": "v10.5.0",
