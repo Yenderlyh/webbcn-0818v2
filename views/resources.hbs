@@ -1,0 +1,10 @@
+<section class="section resources">
+  <h2>Resources</h2>
+    <ul>
+      {{#each links}}
+        <li>
+          <a class="{{this.category}}" href="{{this.url}}" target='_blank'>{{this.title}}</a>
+        </li>
+      {{/each}}
+    </ul>
+</section>
