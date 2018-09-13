@@ -80,11 +80,6 @@ p {
   #site-main {
     overflow:hidden
   }
-
-  .section {
-    width: 50%;
-    float: left;
-  }
 }
 
 /* ---- components ---- */
@@ -130,3 +125,7 @@ section.links {
   padding: 20px;
   border-radius: 5px;
 }
+
+/* ---- images ---- */
+
+

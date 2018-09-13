@@ -1,0 +1,14 @@
+<section class="section images">
+  <h2>Upload a new Image</h2>
+
+  <ul class="card-container">
+    {{#each images}}
+    <li class="card">
+      <h3>{{this.title}}</h3>
+      <p>{{this.category}}</p>
+      <img src="{{this.url}}" alt="{{this.title}}">
+    </li>
+    {{/each}}
+  </ul>
+  
+</section>

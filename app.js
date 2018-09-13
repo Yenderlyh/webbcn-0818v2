@@ -10,6 +10,7 @@ const index = require('./routes/index');
 const resources = require('./routes/resources');
 const events = require('./routes/events');
 const projects = require('./routes/projects');
+const images = require('./routes/images');
 
 // -- App init
 const app = express();
@@ -37,6 +38,7 @@ app.use('/', index);
 app.use('/events', events);
 app.use('/projects', projects);
 app.use('/resources', resources);
+app.use('/images', images);
 
 // -- 404 and error handler
 
