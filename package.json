@@ -8,7 +8,8 @@
     "sass": "node-sass --output-style compressed --source-map true styles/style.scss public/stylesheets/style.css",
     "sass-watch": "node-sass --output-style compressed --source-map true --watch styles/style.scss public/stylesheets/style.css",
     "postinstall": "npm run sass",
-    "seed-resources": "node ./bin/seed/resources.js"
+    "seed-resources": "node ./bin/seed/resources.js",
+    "seed-projects": "node ./bin/seed/projects.js"
   },
   "engines": {
     "node": "v10.5.0",
