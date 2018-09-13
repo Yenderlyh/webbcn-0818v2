@@ -1,0 +1,18 @@
+<section class="section projects">
+  <h2>Projects M1</h2>
+  <ul class="gallery">
+    {{#each data}}
+    <li class="photo">
+      <p class="label">
+        <span>{{this.projectName}}</span>
+        <span>{{this.studentName}}</span>
+        <a href="{{this.presentationLink}}" class="presentation">Presentation</a>
+        <a href="{{this.projectLink}}" class="project">Project</a>
+      </p>
+      <img src="{{this.imageURL}}" alt="">
+    </li>
+    {{/each}}
+  </ul>
+
+  
+</section>
