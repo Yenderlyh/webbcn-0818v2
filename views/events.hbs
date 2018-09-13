@@ -1,0 +1,15 @@
+<section class="section events">
+  <h2>Events at Ironhack</h2>
+  <ul class="card-container">
+    {{#each events}}
+      <li class="card">
+        <ul>
+          <p>{{this.type}}</p>
+          <h3>{{this.name}}</h3>
+          <p>{{this.date}}</p>
+        </ul>
+      </li>
+    {{/each}}
+  </ul>
+
+</section>
