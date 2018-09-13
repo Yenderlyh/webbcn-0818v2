@@ -36,7 +36,7 @@ router.post('/create', (req, res, next) => {
 
   const event = new Event({ date, name, type });
   event.save()
-    .then(movie => {
+    .then(() => {
       res.redirect('/events');
     })
     .catch(next);
