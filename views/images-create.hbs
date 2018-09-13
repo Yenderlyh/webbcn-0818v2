@@ -5,7 +5,7 @@
 
     <div class="field">
       <label>Title</label>
-      <input type="text" name="title">
+      <input type="text" name="title" value="{{fields.title}}">
     </div>
 
     <div class="field">
@@ -25,6 +25,9 @@
 
     <div class="field">
       <button>Submit</button>
+      {{#if message}}
+      <p class="validation">{{message}}</p>
+      {{/if}}
     </div>
 
   </form>

@@ -5,6 +5,9 @@ const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 const mongoose = require('mongoose');
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
+const flash = require('connect-flash');
 
 const index = require('./routes/index');
 const resources = require('./routes/resources');
@@ -22,16 +25,30 @@ mongoose.connect(process.env.MONGODB_URI, {
   reconnectTries: Number.MAX_VALUE
 });
 
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+
+// session setup
+app.use(session({
+  store: new MongoStore({
+    mongooseConnection: mongoose.connection,
+    ttl: 24 * 60 * 60 // 1 day
+  }),
+  secret: 'some-string',
+  resave: true,
+  saveUninitialized: true,
+  cookie: {
+    maxAge: 24 * 60 * 60 * 1000
+  }
+}));
 
 // -- middlewares
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(flash());
 
 // -- routes
 app.use('/', index);
