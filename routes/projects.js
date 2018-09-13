@@ -7,9 +7,9 @@ const Project = require('../models/project');
 
 router.get('/', (req, res, next) => {
   Project.find({})
-    .then((result) => {
+    .then((results) => {
       const data = {
-        result
+        projects: results
       };
       res.render('projects', data);
     })

@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const projectSchema = new Schema({
-  projectName: {
+  name: {
     type: String,
     required: true
   },
@@ -12,11 +12,11 @@ const projectSchema = new Schema({
     type: String,
     required: true
   },
-  presentationLink: {
+  presentationURL: {
     type: String,
     required: true
   },
-  projectLink: {
+  projectURL: {
     type: String,
     required: true
   },
