@@ -1,0 +1,40 @@
+<section class="section">
+  <h2>Add new Project</h2>
+
+  <form action="/projects/create" method="post">
+
+    <div class="field">
+      <label>Project Name</label>
+      <input type="text" name="name" value="{{fields.name}}">
+    </div>
+
+    <div class="field">
+      <label>Student Name</label>
+      <input type="text" name="studentName" value="{{fields.studentName}}">
+    </div>
+
+    <div class="field">
+      <label>Presentation URL</label>
+      <input type="text" name="presentationURL" value="{{fields.presentationURL}}">
+    </div>
+
+    <div class="field">
+      <label>Project URL</label>
+      <input type="text" name="projectURL" value="{{fields.projectURL}}">
+    </div>
+
+    <div class="field">
+      <label>Image</label>
+      <input type="text" name="imageURL" value="{{fields.imageURL}}">
+    </div>
+
+
+    <div class="field">
+      <button>Submit</button>
+      {{#if message}}
+      <p class="validation">{{message}}</p>
+      {{/if}}
+    </div>
+
+  </form>
+</section>
