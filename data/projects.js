@@ -1,3 +1,11 @@
+'use strict';
+
+require('dotenv').config({ path: '../.env' });
+
+const mongoose = require('mongoose');
+
+const Project = require('../models/project');
+
 const projects = [{
   projectName: 'Space Invaders',
   studentName: 'Maria Jose',
@@ -8,7 +16,7 @@ const projects = [{
 
 {
   projectName: 'ROCK - PAPER - SCISSORS',
-  studentName: 'Diana Columbiana',
+  studentName: 'Diana Colombiana',
   presentationLink: 'https://slides.com/dianablanco/deck/#/',
   projectLink: 'https://dbpautt.github.io/Rock-paper-scissors/',
   imageURL: 'https://media.giphy.com/media/2t9m7p4fY2DQEKT7fM/giphy.gif'
@@ -71,3 +79,23 @@ const projects = [{
 }
 
 ];
+
+mongoose.connect(process.env.MONGODB_URI, {
+  keepAlive: true,
+  useNewUrlParser: true,
+  reconnectTries: Number.MAX_VALUE
+})
+  .then(() => {
+    return Project.remove({});
+  })
+  .then(() => {
+    return Project.insertMany(projects);
+  })
+  .then((result) => {
+    console.log('successfully added to database', result);
+    mongoose.connection.close();
+  })
+
+  .catch((error) => {
+    console.log('there has been an error', error);
+  });
