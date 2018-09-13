@@ -1,11 +1,13 @@
 'use strict';
 
+require('dotenv').config();
+
 const mongoose = require('mongoose');
 const data = require('../../data/events.js');
 
-const Event = ('./models/events.js');
+const Event = require('../../models/events.js');
 
-mongoose.connect('mongodb://localhost/webbcn0818v2')
+mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
     console.log('Connected to Mongo!');
     return Event.remove({});
@@ -18,6 +20,6 @@ mongoose.connect('mongodb://localhost/webbcn0818v2')
     console.log('You have some events', results.length);
     mongoose.connection.close();
   })
-  .catch(() => {
-    console.log('There is a problem');
+  .catch((error) => {
+    console.log('There is a problem', error);
   });

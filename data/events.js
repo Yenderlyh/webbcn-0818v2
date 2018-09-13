@@ -15,3 +15,5 @@ const data = [{
   type: 'Talk',
   date: '2018-09-12'
 }];
+
+module.exports = data;

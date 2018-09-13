@@ -10,7 +10,7 @@
     "postinstall": "npm run sass",
     "seed-resources": "node ./bin/seed/resources.js",
     "seed-projects": "node ./bin/seed/projects.js",
-    "seed-events": "node ./bin/seed/seed-events.js"
+    "seed-events": "node ./bin/seed/events.js"
   },
   "engines": {
     "node": "v10.5.0",
