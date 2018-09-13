@@ -9,7 +9,7 @@ const eventsSchema = new Schema({
   type: {
     type: String,
     required: true,
-    enum: ['Party', 'Presentation', 'Talk']
+    enum: ['party', 'presentation', 'talk']
   },
   date: {
     type: Date,
