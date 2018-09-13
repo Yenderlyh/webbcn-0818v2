@@ -7,6 +7,9 @@ const logger = require('morgan');
 const mongoose = require('mongoose');
 
 const index = require('./routes/index');
+const resources = require('./routes/resources');
+const events = require('./routes/events');
+const projects = require('./routes/projects');
 
 // -- App init
 const app = express();
@@ -14,6 +17,7 @@ const app = express();
 // -- Connect to DB
 mongoose.connect(process.env.MONGODB_URI, {
   keepAlive: true,
+  useNewUrlParser: true,
   reconnectTries: Number.MAX_VALUE
 });
 
@@ -30,6 +34,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // -- routes
 app.use('/', index);
+app.use('/events', events);
+app.use('/projects', projects);
+app.use('/resources', resources);
 
 // -- 404 and error handler
 

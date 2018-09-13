@@ -9,6 +9,7 @@ router.get('/', (req, res, next) => {
   User.find({})
     .then((result) => {
       const data = {students: result};
+      
       res.render('index', data);
     })
     .catch(next);
