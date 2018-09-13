@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "start-dev": "nodemon ./bin/www"
+    "start-dev": "nodemon ./bin/www",
+    "sass": "node-sass --output-style compressed --source-map true styles/style.scss public/stylesheets/style.css",
+    "sass-watch": "node-sass --output-style compressed --source-map true --watch styles/style.scss public/stylesheets/style.css",
+    "postinstall": "npm run sass"
   },
   "engines": {
     "node": "v10.5.0",
@@ -19,7 +22,8 @@
     "mongoose": "^5.2.14",
     "morgan": "~1.9.0",
     "multer": "^1.3.1",
-    "multer-storage-cloudinary": "^2.2.1"
+    "multer-storage-cloudinary": "^2.2.1",
+    "node-sass": "^4.9.3"
   },
   "devDependencies": {
     "eslint": "^5.5.0",
