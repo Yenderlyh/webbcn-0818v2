@@ -11,6 +11,9 @@
         <a href="{{this.projectURL}}" class="project">Project</a>
       </p>
       <img src="{{this.imageURL}}" alt="">
+      <form class="delete" action="/projects/{{this.id}}/delete" method="POST">
+        <button class="button danger">Delete</button>
+      </form>
     </li>
     {{/each}}
   </ul>
