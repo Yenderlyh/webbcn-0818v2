@@ -7,6 +7,9 @@
     {{#each resources}}
       <li>
         <a class="icon icon-{{this.category}}" href="{{this.url}}" target='_blank'>{{this.title}}</a>
+        <form class="delete" action="/resources/{{this.id}}/delete" method="POST">
+          <button class="button-icon icon-trash"></button>
+        </form>
       </li>
     {{/each}}
   </ul>
