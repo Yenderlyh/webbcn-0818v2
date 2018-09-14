@@ -1,0 +1,11 @@
+<section class="section events">
+  <h2><span class="type">{{event.type}}</span> <span class="name">{{event.name}}</span></h2>
+  <div class="nav">
+    <a href="/events">All events</a>
+  </div>
+  <p>{{event.date}}</p>
+  <p>{{event.description}}</p>
+  <form class="delete" action="/events/{{event.id}}/delete" method="POST">
+    <button class="button danger">Delete</button>
+  </form>
+</section>

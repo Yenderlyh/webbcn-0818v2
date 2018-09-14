@@ -8,6 +8,10 @@
       <li class="card">
         <h3><span class="type">{{this.type}}</span> <span class="name">{{this.name}}</span></h3>
         <p>{{this.date}}</p>
+        <a href="/events/{{this._id}}">See here for details</a>
+        <form class="delete" action="/events/{{this.id}}/delete" method="POST">
+          <button class="button danger">Delete</button>
+        </form>
       </li>
     {{/each}}
   </ul>
