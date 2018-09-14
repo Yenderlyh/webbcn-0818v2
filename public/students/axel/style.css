@@ -1,0 +1,300 @@
+
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+}
+
+h4{
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+
+/* ---- typography ---- */
+
+body {
+  color: #111;
+  font-size: 16px;
+  line-height: 147%;
+  font-family: 'Concert One';
+}
+
+h1 {
+  margin: auto 0;
+  font-size: 25px;
+  color: #3f51b5;
+}
+
+h2 {
+  color: #f0eceb;
+  font-size: 30px; 
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h3 {
+  color: #3f51b5;
+  text-transform: uppercase;
+}
+
+.site-nav a {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.experiments a {
+  text-decoration: none;
+}
+
+
+
+/* ---- layout ---- */
+
+#site-header {
+  padding: 15px 0;
+  color: white;
+  background-color: white;
+  position: sticky;
+  top: 0;
+}
+
+#site-footer {
+  color: white;
+  padding: 10px 0px;
+  background:  black;
+  text-align: end;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.container {
+  margin: 0 20px;
+}
+
+.section {
+  padding-top: 20px;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 984px;
+     margin: auto;
+  }
+}
+
+
+
+/* ---- components ---- */
+
+.button {
+  padding: 5px;
+  background-color:white;
+  color:  #3f51b5;
+  border: 2px solid #3f51b5;
+  border-radius: 5px;
+}
+
+.button-inverted {
+  padding: 5px;
+  background-color: #3f51b5;
+  color: white;
+  border: 2px solid #3f51b5;
+  border-radius: 5px;
+}
+
+.hide {
+  display: none;
+}
+
+.timer {
+  display: inline-block;
+  text-align: center;
+  font-size: 40px;
+}
+
+
+/* Sections */
+
+header .site-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search {
+  text-align: center;
+}
+
+.input-student {
+  display: inline-block;
+  position: relative;
+}
+
+/* .input-student input:focus {
+  outline:;
+} */
+
+.input-student input {
+  font-family: 'Concert One';
+  text-align-last: left;
+  padding: 5px;
+  font-size: 14px;
+  color: grey;
+  -webkit-appearance: none;
+  border: 1px dotted #3f51b5;
+  border-radius: 5px;
+}
+
+.search-results {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  background-color: gray;
+  border-radius: 5px;
+  text-align: center;
+} 
+
+.search-results a {
+  display: block;
+}
+
+.search-results li:hover {
+  background-color: #3f51b5;
+}
+
+.general-information {
+  background-color: #f0eceb;
+  padding: 0;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.general-information h3{
+  text-align: left;
+}
+.general-information h2 {
+  margin: 0;
+  font-size: 50px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border: white;
+}
+
+.general-information img {
+  width: 100%;
+  margin: 0;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .general-information .main-image {
+    height: 512px;
+    overflow: hidden;
+  }
+}
+
+h3.container {
+  padding-bottom: 10px;
+}
+
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.interests li {
+  max-width: 75px;
+  flex: 1;
+  text-align: center;
+  margin: 0 5px;
+  padding-bottom: 10px;
+}
+
+section.experiments .container {
+  padding-bottom: 10px;
+}
+
+section .list-articles {
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+.experiments article {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .experiments article {
+    width: 47%;
+    margin: 10px;
+  }
+}
+
+section.experiments p {
+  padding-bottom: 10px;
+}
+
+.experiments p, h4 {
+  padding: 15px;
+}
+
+.experiments h4 {
+  cursor: pointer;
+}
+
+.experiments img {
+  width: 15px;  
+}
+
+.close-icon {
+  position: absolute;
+}
+
+.close-icon:hover {
+  cursor: pointer;
+}
+
+.canvas-game {
+  text-align: center;
+}
+
+footer img {
+  padding: 0 5px;
+  width: 40px;
+}
+

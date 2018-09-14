@@ -10,6 +10,6 @@ const main = () => {
       section.classList.toggle('expanded');
     });
   };
-}
+};
 
 window.addEventListener('load', main);

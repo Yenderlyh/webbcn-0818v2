@@ -1,0 +1,271 @@
+
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #696969;
+}
+
+/* ---- typography ---- */
+
+body {
+  color: #949794;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 27px;
+}
+
+h2 {
+  font-size: 22px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 18px;
+  text-align: center;
+}
+h4 {
+  font-size: 14px;
+
+}
+
+p {
+  margin: 0;
+}
+
+
+
+/* ---- layout ---- */
+
+#site-header {
+  color: white;
+  background: #C9D6D5;
+  width: 100%;
+}
+
+
+#site-main {
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+#site-footer {
+  color: white;
+  background: #C9D6D5;
+}
+
+.container {
+  padding: 0 20px;
+  max-width: 1024px;
+}
+
+section {
+  margin-bottom: 10px;
+  padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
+
+input {
+  font-size: 13px;
+}
+
+
+      /* ---- components ---- */
+/* ----components - header - nav----- */
+
+
+div.homepage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center ;
+  margin-bottom: 10px;
+  padding-top: 20px;
+}
+
+ul.site-nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* ----components - quick-nav ----- */
+
+div.quick-nav {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+div.quick-nav .searchbox {
+  position: relative;
+  display: inline-block;  
+}
+
+div.quick-nav input{
+  width: 200px;
+
+}
+
+div.quick-nav .results{
+  position: absolute;
+  top: 23px;
+  background-color: #949794bb;
+  z-index: 1;
+  right: 0;
+  left: 0;
+}
+
+div.quick-nav .results a{
+  color: white;
+  display: inline-block;
+}
+
+div.quick-nav .results a:hover{
+  color: #C9D6D5;
+}
+
+/* ----- counter----- */
+
+div.col {
+  padding-top: 10px;
+  text-align: center;
+}
+
+div.counter {
+  border-width: 2px;
+  border-color: #696969;
+}
+
+.lost {
+  display:flex;
+  align-items:center;
+  padding-top:50px;
+  flex-direction:column;
+}
+
+
+/* ----components - profile----- */
+
+
+section.profile{
+  display: flex;
+  justify-content: space-around;
+}
+
+section.profile .profile-picture {
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  animation: 1s poly infinite alternate ease-in-out;
+  width: 50%;
+}
+@keyframes poly {
+  from {
+    clip-path: polygon(40% 0, 100% 40%, 60% 100%, 0 60%)
+      }
+    to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+      }
+}
+/* ----components - interests----- */
+
+section.interests {
+  background-color:#f5f5f5;
+  background-image: url(https://a.slack-edge.com/1fd8/spacesuit/source/images/backgrounds/bg_halftone_black_30p@2x.png);
+  background-size: 100% auto;
+  padding-bottom: 30px;
+}
+
+section.interests div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+section.interests article{
+  width: 25%;
+}
+
+
+section.interests .articles {
+  display: flex;
+  align-content: center;
+}
+
+section.interests img {
+  clip-path: circle(38%);
+}
+/* ----components - experiments----- */
+
+
+section.experiments div article {
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+section.experiments div .hidden {
+  display: none;
+}
+
+section.experiments div article.html {
+  content: url("http://thewebrocks.com/demos/html5-3d-css/html5.png");
+  width: 20%;
+}
+
+section.experiments div article.css {
+  content: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/2000px-CSS3_logo_and_wordmark.svg.png");
+  width: 70px;
+}
+
+section.experiments div article.javaScript {
+  content: url("https://i2.wp.com/kingphiliptrailriders.com/wpinhere/wp-content/uploads/2016/03/js-logo.png?fit=500%2C500");
+  width: 20%;
+}
+
+
+
+/* ----components - footer----- */
+section.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  margin: 0;
+}
+
+
+
+/* colors:
+green#C4E5DB
+gray greenish #949794
+light gray #FFFFFF
+C9D6D5
+EAF6F5
+  overflow: scroll;
+
+*/
+/* ----components - interests----- */
+
+/* ----components - experiments----- */

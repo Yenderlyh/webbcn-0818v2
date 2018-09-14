@@ -10,10 +10,12 @@ const MongoStore = require('connect-mongo')(session);
 const flash = require('connect-flash');
 
 const index = require('./routes/index');
+const api = require('./routes/api');
 const resources = require('./routes/resources');
 const events = require('./routes/events');
 const projects = require('./routes/projects');
 const images = require('./routes/images');
+const students = require('./routes/students/index');
 
 // -- App init
 const app = express();
@@ -52,10 +54,12 @@ app.use(flash());
 
 // -- routes
 app.use('/', index);
+app.use('/api', api);
 app.use('/events', events);
 app.use('/projects', projects);
 app.use('/resources', resources);
 app.use('/images', images);
+app.use('/students', students);
 
 // -- 404 and error handler
 
