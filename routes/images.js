@@ -3,6 +3,8 @@
 const express = require('express');
 const uploadCloud = require('../services/cloudinary.js');
 const router = express.Router();
+const ObjectId = require('mongoose').Types.ObjectId;
+
 const Image = require('../models/image');
 
 router.get('/', (req, res, next) => {
@@ -34,6 +36,20 @@ router.post('/create', uploadCloud.single('photo'), (req, res, next) => {
   const url = req.file.url;
   const image = new Image({ title, category, url });
   image.save()
+    .then(() => {
+      res.redirect('/images');
+    })
+    .catch(next);
+});
+
+router.post('/:imageId/delete', (req, res, next) => {
+  const id = req.params.imageId;
+
+  if (!ObjectId.isValid(id)) {
+    return res.redirect('/images');
+  }
+
+  Image.remove({ _id: id })
     .then(() => {
       res.redirect('/images');
     })
