@@ -8,6 +8,7 @@
     "sass": "node-sass --output-style compressed --source-map true styles/style.scss public/stylesheets/style.css",
     "sass-watch": "node-sass --output-style compressed --source-map true --watch styles/style.scss public/stylesheets/style.css",
     "postinstall": "npm run sass",
+    "seed-users": "node ./bin/seed/users.js",
     "seed-resources": "node ./bin/seed/resources.js",
     "seed-projects": "node ./bin/seed/projects.js",
     "seed-events": "node ./bin/seed/events.js"
