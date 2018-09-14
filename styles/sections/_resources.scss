@@ -6,6 +6,7 @@
   
   ul {
     list-style: none;
+    padding-left:0;
   }
     
   li:hover {
@@ -41,7 +42,11 @@
   .icon-events::after{
     background: url('../images/calendar.png');
     background-size: 20px; 
-  }   
+  } 
+    
+  form {
+    display: inline;
+  }
 }
 
 
