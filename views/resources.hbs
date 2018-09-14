@@ -1,13 +1,13 @@
 <section class="section resources">
   <h2>Resources</h2>
-   <div class="nav">
+  <div class="nav">
     <a class="button" href="/resources/create">New resource</a>
   </div>
-    <ul>
-      {{#each resources}}
-        <li class="{{this.category}}">
-          <a href="{{this.url}}" target='_blank'>{{this.title}}</a>
-        </li>
-      {{/each}}
-    </ul>
+  <ul>
+    {{#each resources}}
+      <li>
+        <a class="icon icon-{{this.category}}" href="{{this.url}}" target='_blank'>{{this.title}}</a>
+      </li>
+    {{/each}}
+  </ul>
 </section>

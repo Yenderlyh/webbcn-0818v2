@@ -6,55 +6,42 @@
   
   ul {
     list-style: none;
-    li {
-      a {
-        position: relative;
-        padding-left: 25px;
-        text-decoration: none;
-        color: black;
-        &:hover {
-         opacity: 0.7;
-        }
-        &::after {
-          content: "";
-          background-size: 20px; 
-          width: 20px;
-          height: 20px;
-          position: absolute;
-          left: 0;
-        }
-      }
-      &.documentation a::after{
-        background: url('../images/contract.png');
-        background-size: 20px; 
-       }
-       &.exercises a::after{
-        background: url('../images/html-tag.png');
-        background-size: 20px; 
-       }
-         
-       &.events a::after{
-         background: url('../images/calendar.png');
-         background-size: 20px; 
-       }
-    }
+  }
+    
+  li:hover {
+    opacity: 0.7;
+  }
 
-  }
-  .nav {
-    a {
-      &.button {
-        border-radius: 5px;
-        border: 1px solid black;
-        background-color: #b1b1b1;
-        text-decoration: none;
-        color: black;
-        padding: 5px 20px;
-        text-align: center;
-        font-size: 16px;
-        cursor: pointer;
-      }
+  .icon {
+    position: relative;
+    padding-left: 25px;
+    text-decoration: none;
+    color: black;
+    
+    &::after {
+      content: "";
+      background-size: 20px; 
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 0;
     }
   }
+
+  .icon-documentation::after{
+    background: url('../images/contract.png');
+    background-size: 20px; 
+  }
+  
+  .icon-exercises::after{
+    background: url('../images/html-tag.png');
+    background-size: 20px; 
+  }
+  
+  .icon-events::after{
+    background: url('../images/calendar.png');
+    background-size: 20px; 
+  }   
 }
 
 

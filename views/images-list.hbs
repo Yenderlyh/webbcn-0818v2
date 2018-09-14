@@ -6,9 +6,11 @@
   <ul class="card-container">
     {{#each images}}
     <li class="card">
-      <h3>{{this.title}}</h3>
-      <p>{{this.category}}</p>
+      <h3><span class="type">{{this.category}}</span> <span class="name">{{this.title}}</span></h3>
       <img src="{{this.url}}" alt="{{this.title}}">
+      <form class="delete" action="/images/{{this.id}}/delete" method="POST">
+        <button class="button danger">Delete</button>
+      </form>
     </li>
     {{/each}}
   </ul>
