@@ -1,20 +1,19 @@
 <section class="section projects">
   <h2>Projects M1</h2>
-  <a href="/projects/create" class="button">Create a Project</a>
+  <a href="/projects/" class="button">Go Back</a>
   <ul class="gallery">
     {{#each projects}}
     <li class="photo">
       <p class="label">
         <span class="project">"{{this.name}}" </span>
         <span class="student">- By : {{this.studentName}}</span>
+        <a href="{{this.presentationURL}}" class="presentation">Presentation</a>
+        <a href="{{this.projectURL}}" class="project">Project</a>
       </p>
       <img src="{{this.imageURL}}" alt="">
-      <div>
-      <a class="button" href="/projects/{{this.id}}" class="button">More information</a>
       <form class="delete" action="/projects/{{this.id}}/delete" method="POST">
         <button class="button danger">Delete</button>
       </form>
-      </div>
     </li>
     {{/each}}
   </ul>

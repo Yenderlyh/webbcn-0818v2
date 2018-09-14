@@ -3,6 +3,8 @@
 const express = require('express');
 const router = express.Router();
 
+const ObjectId = require('mongoose').Types.ObjectId;
+
 const Project = require('../models/project');
 
 router.get('/', (req, res, next) => {
@@ -39,6 +41,39 @@ router.post('/create', (req, res, next) => {
 
   const project = new Project({ name, studentName, presentationURL, projectURL, imageURL });
   project.save()
+    .then(() => {
+      res.redirect('/projects');
+    })
+    .catch(next);
+});
+
+router.get('/:projectId', (req, res, next) => {
+  const id = req.params.projectId;
+
+  // if (!ObjectId.isValid(id)) {
+  //   return res.redirect('/projects');
+  // }
+  Project.find({ _id: id })
+    .then((results) => {
+      const data = {
+        projects: results
+      };
+      res.render('project-detail', data);
+    })
+    .catch((error) => {
+      console.log('there has been an error', error);
+      return res.redirect('/projects');
+    });
+});
+
+router.post('/:projectId/delete', (req, res, next) => {
+  const id = req.params.projectId;
+
+  if (!ObjectId.isValid(id)) {
+    return res.redirect('/projects');
+  }
+
+  Project.remove({ _id: id })
     .then(() => {
       res.redirect('/projects');
     })
