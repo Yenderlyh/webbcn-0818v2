@@ -7,8 +7,8 @@ const projects = [{
   projectURL: 'https://mjhrhacker.github.io/space-invaders/',
   imageURL: 'https://media.giphy.com/media/YlTsQ2RTMaFpWF3It0/giphy.gif'
 }, {
-  name: 'ROCK - PAPER - SCISSORS',
-  studentName: 'Diana Colombiana',
+  name: 'Rock - Paper - Scissors',
+  studentName: 'Diana La Colombiana',
   presentationURL: 'https://slides.com/dianablanco/deck/#/',
   projectURL: 'https://dbpautt.github.io/Rock-paper-scissors/',
   imageURL: 'https://media.giphy.com/media/2t9m7p4fY2DQEKT7fM/giphy.gif'
@@ -55,8 +55,8 @@ const projects = [{
   projectURL: 'https://axelgar.github.io/underdog/',
   imageURL: 'https://media.giphy.com/media/3aW3JtgEEYY6Hd5IhZ/giphy.gif'
 }, {
-  name: 'Diva Queen ',
-  studentName: 'Diva the Doggy',
+  name: 'Doggy',
+  studentName: 'Fluffy Pancake ',
   presentationURL: 'https://www.factslides.com/s-Dogs',
   projectURL: 'http://www.gamesgames.com/games/dog-games',
   imageURL: 'http://www.gifbin.com/bin/012012/1327602286_cute_bichon_frise_puppy.gif'
