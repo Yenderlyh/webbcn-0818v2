@@ -1,18 +1,18 @@
 const data = [{
   name: 'Ironbeers',
-  type: 'Party',
+  type: 'party',
   date: '2018-09-14'
 }, {
   name: 'BBQ',
-  type: 'Party',
+  type: 'party',
   date: '2018-08-31'
 }, {
   name: 'Game Show',
-  type: 'Presentation',
+  type: 'presentation',
   date: '2018-09-07'
 }, {
   name: 'UX-UI',
-  type: 'Talk',
+  type: 'talk',
   date: '2018-09-12'
 }];
 

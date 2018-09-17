@@ -85,7 +85,7 @@ const main = (students) => {
   p.classList.add('button');
   p.classList.add('timer');
   p.innerText = time;
-  document.querySelector('.main-image').appendChild(p);
+  document.querySelector('.input-student').appendChild(p);
   const timerId = setInterval(() => {
     time--;
     if (time === 0) { clearInterval(timerId); }
@@ -93,25 +93,6 @@ const main = (students) => {
   }, 1000);
 
   p.addEventListener('click', () => clearInterval(timerId));
-
-  // ------GAMES-----//
-  const playButton = document.querySelector('.play');
-  let frame;
-
-  playButton.addEventListener('click', () => {
-    frame = buildDom(
-      `<div class="canvas-game">
-        <a class="close-icon"><img src="https://image.flaticon.com/icons/svg/148/148766.svg"></a>
-        <iframe src="https://axelgar.github.io/eternal-enemies/">
-      </div>`
-    );
-
-    document.querySelector('.experiments').appendChild(frame);
-    const cross = document.querySelector('.close-icon');
-    cross.addEventListener('click', destroyGame);
-  });
-
-  const destroyGame = () => { if (frame) frame.remove(); };
 }; // End of main()
 
 window.addEventListener('load', () => {
