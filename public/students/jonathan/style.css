@@ -1,0 +1,331 @@
+
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ---- typography ---- */
+
+
+body {
+  font-family: 'Muli', sans-serif;
+  font-size: 16px;
+  line-height: 147%;
+}
+
+h1, h2, h3, h4 {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 150%;
+  color: grey;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #e54009;
+  line-height: 150%;
+}
+
+h3 {
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+
+h4 {
+  font-size: 16px;
+  padding-top: 20px;
+}
+
+p {
+  margin: 0;
+  text-align: center;
+}
+
+a {
+  color: #414141;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 800;
+}
+
+a:hover {
+  color: #e54009
+}
+
+/* typo specifics */
+
+.nav-bar{
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-bar li a {
+  text-transform: lowercase;
+}
+
+.overview ul {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+}
+
+h3.counter-box {
+  display: inline-block;
+  font-size: 48px;
+  border: 2px solid #414141;
+  padding: 30px;
+}
+
+p.description {
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
+#site-footer p {
+  text-align: left;
+  font-size: 12px;
+  color: white;
+}
+
+
+/* ---- layout ---- */
+
+#site-header {
+  line-height: 40px;
+  padding-top: 50px;
+  margin-bottom: 20px;
+
+}
+
+#site-footer {
+  background-color: #e54009;
+  padding: 20px 0;
+}
+
+#site-main {
+  margin-bottom: 60px;
+}
+
+.container {
+  margin: 0 30px;
+}
+
+.section {
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 728px;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+/* ---- components ---- */
+
+.quick-nav {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.quick-nav label {
+  padding: 0 10px;
+}
+
+.quick-nav .search-bar {
+  position: relative;
+  display: inline-block;
+}
+
+input[type="text"] {
+    font-size: 48px;
+    font-weight: 100;
+}
+
+.search-bar #quick-jump {
+  padding: 5px 0;
+  margin: 10px 2px;
+  -webkit-appearance: none;
+  border-style: hidden;
+  border-bottom: 1px solid #bebebe;
+  width: 260px;
+  font-weight: 200;
+}
+
+#quick-jump:focus {
+  outline: none;
+}
+
+.quick-nav .search-results {
+  position: absolute;
+  text-align: left;
+  background-color: #e54009b0;
+  left: 0; right: 0;
+  z-index: 10;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.search-results {
+  padding: 0;
+}
+
+.search-results ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-results li {
+  padding: 20px;
+  line-height: 150%;
+}
+
+.search-results li:hover {
+  background-color: #e54009;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.search-results a {
+  color: white;
+}
+
+.nav-bar {
+  text-align: center;
+}
+
+nav.hidden .nav-bar {
+  display: none;
+}
+
+.game {
+  text-align: center;
+}
+
+article.card.hidden .retracted {
+  display: none;
+}
+
+article.card {
+  cursor: pointer;
+}
+
+.button {
+  display: block;
+  background-color: #e54009;
+  width: 200px;
+  border-radius: 20px;
+  padding: 5px;
+  margin: 20px auto;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+h3.menu-button {
+  background-color: white;
+  border: 2px solid #e54009;
+  width: 44px;
+  height: 100%;
+  padding: 0;
+  border-radius: 50%;
+  color: #e54009;
+  margin-bottom: 5px; 
+  cursor: pointer;
+}
+
+p.button {
+  cursor: pointer;
+}
+
+.divider {
+  width: 70%;
+  margin: 20px auto;
+}
+
+.overview img {
+  clip-path: circle(40% at center);
+  width: 250px;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  z-index: 5;
+}
+
+
+.card {
+  flex: 1;
+  display: block;
+  background-color: white;
+  box-shadow: 2px 2px 3px 2px #4e4e4e5b;
+  padding: 30px;
+  margin: 20px auto;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(56, 56, 56);
+}
+
+.card a {
+  text-decoration: none;
+  color: white;
+}
+
+.card .button {
+  border-radius: 0;
+  border: 2px solid #e54009;
+  background-color: white;
+  color: #e54009;
+}
+
+.card .button:hover {
+  background-color: #e54009;
+  color: white;
+}
+
+.card .button:active {
+  background-color: #9c3917;
+  border: 2px solid #9c3917
+}
+
+.card .bubtton:focus {
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  section .experiments {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 1;
+    margin: 10px;
+  }
+
+}

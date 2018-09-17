@@ -1,0 +1,200 @@
+/*--------reset--------*/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background-color: #FFFCF9;
+}
+
+/*--------layout--------*/
+.container {
+  margin: 0 20px;
+}
+
+img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 728px;
+    margin: 0 auto;
+  }
+
+  .section {
+    margin-bottom: 30px;
+    padding-top: 30px;
+  }
+
+  section.interests .flexbox-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  section.experiments {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  section.interests .flexbox-container .hobbie {
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+
+  }
+}
+
+/*--------typography--------*/
+body {
+color: black;  /*inheritance*/
+font-family: "Ubuntu Condensed";
+font-size: 22px;
+}
+
+
+#header .title {
+  font-size: 50px;
+  font-family: "Delius Unicase";
+  color: rgb(255, 239, 16);
+  text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black; 
+}
+
+#header .homepage-link {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+
+#footer p{
+  font-size: 12px;
+}
+
+#experiments .github-link{
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+
+#experiments .github-link:active {
+  font-weight: bold;
+}
+
+#header .homepage-link:active {
+  font-weight: bold;
+}
+
+/*--------header--------*/
+#header {
+  background-image: url("https://s15.postimg.cc/e4xusj10b/tiny-black-dots-on-white.jpg");
+  line-height: 40px; /*inheritance*/
+  padding: 10px;
+  box-shadow: 1px 1px 10px #707070;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+#header .homepage-link {
+  display: inline-block;
+  float: right;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#header .title {
+  text-align: center;
+  justify-content: center;
+}
+/*--------main--------*/
+
+#main .presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+#main .presentation img {
+  border: 2px solid #000;
+  border-radius: 5px;
+  width: 50%;
+}
+#main .interests {
+  text-align: center;
+  padding: 0 15px;
+  background-color: rgb(255, 208, 0);
+  box-shadow: 1px 1px 10px #707070;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  margin-bottom: 20px;
+}
+
+
+#main .interests img {
+  border: 2px solid #000;
+  border-radius: 5px;
+  justify-content: space-between;
+}
+
+
+/*--------components--------*/
+#experiments .github-link{
+  background-color: #FFD400;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#experiments .github-link:active {
+  background-color: white;
+}
+
+#header .homepage-link:active {
+  background-color: rgb(255, 208, 0);
+}
+
+/*--------sections--------*/
+#experiments {
+  background-color: #818181;
+  box-shadow: 1px 1px 10px #707070;
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  margin-bottom: 20px;
+}
+
+#experiments .header img{
+  border: 2px solid #000;
+  border-radius: 5px;
+  
+}
+
+#experiments .header .title{
+  text-align: center; 
+}
+
+
+/*--------footer--------*/
+#footer p{
+  display: block;
+  background-color: #FFD400;
+  padding: 10px;
+  text-align: center;
+}

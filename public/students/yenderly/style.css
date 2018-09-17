@@ -1,0 +1,303 @@
+/*reset*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Satisfy');
+
+html {
+    box-sizing: border-box; 
+}
+*, *:before, *after {
+    box-sizing: inherit;
+}
+* {
+    margin: 0;
+    padding: 0;    
+}
+nav ul {
+	list-style:none;
+}
+ 
+/*Typo*/
+
+body{
+    font-family:'Open Sans Condensed', sans-serif;
+}
+/*Layout*/
+
+.container {
+    padding: 0 20px;  
+}
+
+@media (min-width: 768px) {
+    .container {
+      max-width: 728px;
+      margin: 0 auto;
+    }
+}
+/*Components*/
+
+.button {
+    padding: 5px;
+    background-color:white;
+    color:  #3f51b5;
+    border-radius: 25px;
+  }
+  
+.button-inverted {
+    padding: 5px;
+    background-color: red;
+    color: white;
+    border-radius: 25px;
+  } 
+
+/*Timer*/
+
+div.timer {
+    font-size: 30px;
+    font-weight: 700;
+    border: 1bold slateblue;
+    display: inline-block;
+    padding: 10px;
+}
+
+/*Nav Bar*/
+header {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+} 
+
+nav > ul {
+	display:table;
+	width:100%;
+	background:orange;
+	position:relative;
+}
+ 
+nav > ul li {
+	display:table-cell;
+}
+ 
+nav > ul li a {
+	color:#fff;
+	display:block;
+	line-height:20px;
+	padding:20px;
+	position: relative;
+	text-align:center;
+	text-decoration:none;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+nav > ul > li > a span {
+	background:#174459;
+	display:block;
+	height:100%;
+	width:100%;
+	left:0;
+	position:absolute;
+	top:-55px;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+ 
+nav li a .icon {
+    color:white;
+    display: block;
+    line-height: 60px;
+}
+
+nav > ul > li > a:hover > span {
+	top:0;
+}
+ 
+/*Colores*/
+
+nav ul li a .primero {
+    background:orange;
+}
+ 
+nav ul li a .segundo {
+	background:#5da5a2;
+}
+ 
+nav ul li a .tercero {
+	background:#f25724;
+}
+ 
+nav ul li a .cuarto {
+    background:#0e5061;
+
+}
+ 
+nav ul li a .quinto {
+    background:lightpink;
+    
+}
+nav ul li a .sexto {
+    background:lightgreen;
+    
+}
+
+/*Main*/
+body { 
+    margin: 0; 
+    background-image: url("http://blog.visme.co/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-045.jpg")   
+}
+div.main{
+    background-color:rgba(228, 190, 215, 0.274);
+}
+/*search*/
+.search {
+    text-align: center;
+  }
+  
+  .input-student {
+    display: inline-block;
+    position: relative;
+  }
+  
+  
+  .input-student input {
+    font-family: 'Concert One';
+    text-align-last: left;
+    padding: 10px;
+    font-size: 14px;
+    -webkit-appearance: none;
+    border: 1px solid pink;
+    background-color: lightgoldenrodyellow;
+    border-radius: 5px;
+
+  }
+  
+  .search-results {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    background-color: gray;
+    border-radius: 5px;
+    text-align: center;
+  } 
+  
+  .search-results a {
+    display: block;
+  }
+  
+  .search-results li:hover {
+    background-color: #3f51b5;
+  }
+
+section.banner div{
+    background-image: url();
+    margin: 0 auto;
+    color:darkslategray;
+    text-align: center;
+}
+
+section.banner div h1{
+    text-align: center;
+    font-size: 60px;
+
+}
+
+/*Section ABOUT*/
+
+main img.me{
+    border-radius: 100%;
+    display: block;
+    margin: 0 auto; 
+    width: 50%;   
+}
+section.about{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center; 
+}
+section.about p {
+    padding: 20px; 
+}
+section.about h2 {
+    padding: 15px;
+}
+
+article.interest .wrap.hide {
+    display: none;
+}
+/*section hobbies*/
+
+section.hobbies{
+    background-color: rgba
+}
+article div.wrap img {
+    border-radius: 100%;
+    height: 100px;
+    padding: 10px 30px;
+}
+section.hobbies h3{
+    padding: 10px;
+}
+section.about ul li{
+    list-style: none;
+}
+
+/*box*/
+
+.box { 
+    width: 60%;
+    margin: 0 auto;
+}
+/*section experiments*/
+
+section.experiments {
+    background-color: rgba(12, 25, 38, 073);
+    border-radius: 5px;
+    color: wheat;
+    padding: 20px;
+    text-align: center;
+
+}
+section.experiments h2 { 
+    padding-bottom: 20px;
+}
+section.experiments h3 {
+    padding-bottom: 15px;
+}
+section.experiments p {
+    padding: 10px;
+}
+section.experiments a{
+    padding: 5px 10px;
+    
+}
+
+/*Contact*/
+
+section.contact{
+    background-color: pink;
+}
+section.contact li {
+    list-style: none;
+}
+section.contact .list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;   
+}
+section.contact .list li {
+    padding: 5px;
+}
+section.contact li .icon{
+    font-size: 30px;   
+    color: navy;
+}
+section.contact li a{
+    text-decoration: none; 
+
+}

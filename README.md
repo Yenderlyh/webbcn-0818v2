@@ -1,14 +1,15 @@
 # Project Name
 
-## Description
 
+## Description
 Describe your project in one/two lines.
  
-## User Stories
 
+## User Stories
 - **404** - As a user I want to see a nice 404 page when I go to a page that doesn’t exist so that I know it was my fault 
 - **500** - As a user I want to see a nice error page when the super team screws it up so that I know that is not my fault
 - **Homepage** - As a user I want to access the homepage so that I see the list of students
+- **Student page** - As a user I want to see each student page so that i can learn about them
 - **Sign up** - As a user I want to sign up on the webpage so that I can use the private features
 - **Login** - As a user I want to log in on the webpage so that I can get back to my account
 - **Logout** - As a user I want to log out from the webpage so that I can make sure no one will access my account
@@ -51,8 +52,8 @@ User profile:
 - see other users profile
 - list of projects built by the users
 
-## Routes:
 
+## Routes:
 - GET / 
   - renders the homepage
 
@@ -204,8 +205,12 @@ User profile:
   - delete a resource
   - redirect to /resources
 
-## Models
+- GET /student/*
+  - show the student page
+  - use student layout
 
+
+## Models
 User model
  
 ```
@@ -239,6 +244,17 @@ Resource model
 title: String (required)
 url: String (required)
 category: String (enum: documentation, exercises, events) (required)
+
+```
+
+Project model
+
+```
+name: String (required)
+studentName: String (required)
+presentationUrl: String (required)
+projectUrl: String (required)
+imageUrl: String (required)
 
 ```
 
