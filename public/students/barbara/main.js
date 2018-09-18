@@ -1,14 +1,13 @@
 'use strict';
 
-const main = () => {
-  // - show hide experiments
+const nodes = document.querySelectorAll('article.card h4');
 
-  const nodes = document.querySelectorAll('article.card h4');
-
+const main = (students) => {
   for (let ix = 0; ix < nodes.length; ix++) {
     nodes[ix].addEventListener('click', (event) => {
       const h4 = event.currentTarget;
       const article = h4.parentNode;
+      article.classList.toggle('is-expanded');
       const content = article.querySelector('.content');
       const expandArrow = article.querySelector('.expand');
       const collapseArrow = article.querySelector('.collapse');
@@ -32,8 +31,10 @@ const main = () => {
   };
 
   const displayResults = (results) => {
-    const searchResults = document.querySelector('.quick-nav .search-results');
-    searchResults.innerHTML = '';
+    event.stopPropagation();
+    if (!results.length) {
+      return;
+    };
 
     const ul = document.createElement('ul');
     results.forEach((student) => {
@@ -51,67 +52,87 @@ const main = () => {
   const handleChange = () => {
     const searchTerms = input.value.toLowerCase();
     const results = findStudents(searchTerms);
+    searchResults.innerHTML = '';
+
     displayResults(results);
   };
+
+  // const searchResults = document.querySelector('.quick-nav .search-results');
+  // searchResults.innerHTML = '';
 
   const input = document.querySelector('.quick-nav .search input');
   input.addEventListener('keyup', handleChange);
 
   const searchResults = document.querySelector('.quick-nav .search-results');
-
   document.body.addEventListener('click', () => {
     searchResults.innerHTML = '';
   });
 
   input.addEventListener('click', (event) => {
-    event.stopPropagation();
+    return event.stopPropagation(event);
   });
-
   input.addEventListener('focus', handleChange);
 
   document.addEventListener('keyup', (e) => {
-    if (e.keyCode == 27) {
+    if (e.keyCode === 27) {
       searchResults.innerHTML = '';
     }
   });
 
-  // - play
+  input.addEventListener('click', event => event.stopPropagation(event));
+  input.addEventListener('focus', handleChange);
 
-  // var playButton = document.querySelector('.game .button');
+  // Game
 
-  // playButton.addEventListener('click', countDown);
+  const question = 'Do you want to play? You have to guess my favorite interest in 10 seconds, and you have only one chance! Good luck!';
+  let intervalId;
+  if (window.confirm(question)) {
+    // ---- margin for student quick jump
 
-  //  countDown(counter) {
-  //   playButton.removeEventListener('click', countDown);
+    const addMargin = document.querySelector('.sub-header');
+    addMargin.classList.add('add-margin');
 
-  //   var description = document.querySelector('.game .description');
-  //   description.innerHTML = "find the easter egg on this page and click it!";
+    // ---- timer starts
 
-  //   var easterEgg = document.querySelector('section.overview img')
-  //   easterEgg.addEventListener('click', function() {
-  //     // var displayCountdown = document.querySelector('.game .counter-box');
-  //     clickedImage = true;
-  //     // displayCountdown.innerHTML = '0';
-  //   });
+    const timer = document.querySelector('.timer');
 
-  //   var clickedImage = false;
+    const spanTimer = document.createElement('span');
 
-  //   var counter = 30;
-  //   var timeoutId = window.setInterval(timerFunction, 100);
+    let timeLeft = 10;
+    spanTimer.innerText = timeLeft;
 
-  //   function timerFunction () {
-  //     if (clickedImage) {
-  //       clearInterval(timeoutId);
-  //     } else if (counter >= 0) {
-  //       var displayCountdown = document.querySelector('.game .counter-box');
-  //       displayCountdown.innerHTML = counter;
-  //       counter--;
-  //       // console.log(counter);
-  //     } else {
-  //       clearInterval(timeoutId);
-  //     }
-  //   }
-  // };
+    console.log(timeLeft);
+    intervalId = setInterval(() => {
+      if (timeLeft) {
+        timeLeft--;
+        console.log(timeLeft);
+      } else {
+        clearInterval(intervalId);
+        location.href = 'https://i.giphy.com/media/Ix5Pk3cUofTLW/giphy.webp';
+      }
+      spanTimer.innerText = timeLeft;
+    }, 1000);
+
+    timer.appendChild(spanTimer);
+  }
+
+  // ---- game answers
+
+  const wrongAnswer = document.querySelectorAll('.wrong-answer');
+  for (let ix = 0; ix < wrongAnswer.length; ix++) {
+    wrongAnswer[ix].addEventListener('click', () => {
+      clearInterval(intervalId);
+      window.confirm('Try again');
+      window.location.href = 'https://i.giphy.com/media/Ix5Pk3cUofTLW/giphy.webp';
+    });
+  }
+
+  const rightAnswer = document.querySelector('.right-answer');
+  rightAnswer.addEventListener('click', () => {
+    clearInterval(intervalId);
+    window.confirm('Amazing, you are right!!');
+    window.location.href = 'https://i.giphy.com/media/3oFzmkkwfOGlzZ0gxi/giphy.webp';
+  });
 };
 
 window.addEventListener('load', () => {
