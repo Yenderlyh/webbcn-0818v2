@@ -116,6 +116,7 @@ p.description {
 #site-footer {
   background-color: #e54009;
   padding: 20px 0;
+  display: flex;
 }
 
 #site-main {
@@ -277,6 +278,17 @@ p.button {
   z-index: 5;
 }
 
+.feature-game {
+  margin: 50px auto;
+  height: 600px;
+  width: 100%;
+}
+
+iframe{
+  width: 100%;
+  height: 600px;
+  border: 5px solid #e54009;
+}
 
 .card {
   flex: 1;
@@ -316,6 +328,18 @@ p.button {
   outline: none;
 }
 
+footer .social {
+  display: flex;
+}
+
+footer .social-icon {
+  height: 20px;
+}
+
+footer a {
+  margin: 0 10px;
+}
+
 @media (min-width: 768px) {
   section .experiments {
     display: flex;
@@ -327,5 +351,23 @@ p.button {
     flex: 1;
     margin: 10px;
   }
-
+  
+  
 }
+
+@media (max-width: 375px) {
+
+    #site-footer {
+      display: block;
+    }
+
+    #site-footer a {
+      padding-top: 20px;
+      margin: 0 auto;
+    }
+
+    #site-footer p {
+      text-align: center;
+    }
+
+  }
