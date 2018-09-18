@@ -23,10 +23,10 @@ const main = (students) => {
   };
 
   const displayResults = (results) => {
-    event.stopPropagation();
-    if (!results.length) {
-      return;
-    }
+    // event.stopPropagation();
+    // if (!results.length) {
+    //   return;
+    // }
 
     const ul = document.createElement('ul');
 
@@ -70,37 +70,37 @@ const main = (students) => {
 
   // ------- TIMER
 
-  const question = 'Do you want to play? You have to guess what is my favorite interest in 10 seconds and you have only one chance! Are you readyyyyy??';
-  let intervalId;
-  if (window.confirm(question)) {
-    // ---- margin for student quick jump
+  // const question = 'Do you want to play? You have to guess what is my favorite interest in 10 seconds and you have only one chance! Are you readyyyyy??';
+  // let intervalId;
+  // if (window.confirm(question)) {
+  //   // ---- margin for student quick jump
 
-    const addMargin = document.querySelector('.sub-header');
-    addMargin.classList.add('add-margin');
+  //   const addMargin = document.querySelector('.game');
+  //   addMargin.classList.add('add-margin');
 
-    // ---- timer starts
+  //   // ---- timer starts
 
-    const timer = document.querySelector('.timer');
+  //   const timer = document.querySelector('.timer');
 
-    const spanTimer = document.createElement('span');
+  //   const spanTimer = document.createElement('span');
 
-    let timeLeft = 10;
-    spanTimer.innerText = timeLeft;
+  //   let timeLeft = 10;
+  //   spanTimer.innerText = timeLeft;
 
-    console.log(timeLeft);
-    intervalId = setInterval(() => {
-      if (timeLeft) {
-        timeLeft--;
-        console.log(timeLeft);
-      } else {
-        clearInterval(intervalId);
-        location.href = 'https://i.giphy.com/media/Ix5Pk3cUofTLW/giphy.webp';
-      }
-      spanTimer.innerText = timeLeft;
-    }, 1000);
+  //   console.log(timeLeft);
+  //   intervalId = setInterval(() => {
+  //     if (timeLeft) {
+  //       timeLeft--;
+  //       console.log(timeLeft);
+  //     } else {
+  //       clearInterval(intervalId);
+  //       location.href = 'https://i.giphy.com/media/Ix5Pk3cUofTLW/giphy.webp';
+  //     }
+  //     spanTimer.innerText = timeLeft;
+  //   }, 1000);
 
-    timer.appendChild(spanTimer);
-  }
+  //   timer.appendChild(spanTimer);
+  // }
 
   // ---- game answers
 
