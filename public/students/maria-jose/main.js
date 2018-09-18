@@ -53,7 +53,7 @@ const main = (students) => {
     searchResults.innerHTML = '';
   });
 
-  input.addEventListener('click', () => {
+  input.addEventListener('click', (event) => {
     event.stopPropagation();
   });
 
