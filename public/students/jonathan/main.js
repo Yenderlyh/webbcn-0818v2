@@ -59,10 +59,12 @@ const main = (students) => {
     displayResults(results);
 
     const searchResults = document.querySelector('.quick-nav .search-results');
-    document.body.addEventListener('click', () => searchResults.innerHTML = '');
+    document.body.addEventListener('click', () => {
+      return searchResults.innerHTML = '';
+    });
 
     document.addEventListener('keyup', (e) => {
-      if (e.keyCode == 27) {
+      if (e.keyCode === 27) {
         searchResults.innerHTML = '';
       }
     });
