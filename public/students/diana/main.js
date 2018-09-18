@@ -51,10 +51,10 @@ const main = (students) => {
   const input = document.querySelector('div.searchbox input');
   input.addEventListener('keyup', handleChange);
 
-  document.body.addEventListener('click', () => searchResults.innerHTML = '');
+  document.body.addEventListener('click', () => { searchResults.innerHTML = ''; });
 
   document.body.addEventListener('keyup', event => {
-    event.preventDefault;
+    event.preventDefault();
     if (event.key === 'Escape') {
       searchResults.innerHTML = '';
     }
