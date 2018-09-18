@@ -68,23 +68,19 @@ html {
     height: 170px;
 }
 
-#site-header .nav-bar {
-    display: flex;
-}
-
 #site-header .nav-bar h3 {
-    flex: 1 0 33%;
+    flex-direction: column;
 }
 
 #site-header .nav-bar nav {
-    flex: 1 0 33%;
+    flex-direction: column;;
     text-align: center;
 }
 
-#site-header .nav-bar .game {
+/* #site-header .nav-bar .game {
     flex: 1 0 33%;
     text-align: right;
-}
+} */
 
 #site-main {
     margin-top: 170px;
@@ -126,7 +122,32 @@ header {
 
 #site-header nav {
     display: flex;
-    justify-content: center; 
+    flex-direction: column;
+    align-content: center;
+}
+
+#site-header .nav-homepage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+#site-header .nav-homepage h3 {
+    flex: 1;
+}
+
+#site-header .links-pages {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+#site-header .links-pages a {
+    flex: 1;
+}
+
+#site-header .homepage {
+    flex: 1;
 }
 
 #site-header nav a {
@@ -137,6 +158,10 @@ header {
     font-size: 13px; 
     color: #474646;
     text-decoration: none;
+}
+
+#site-header nav a:last-child {
+    padding: 0;
 }
 
 
@@ -224,7 +249,7 @@ section.experiments .card {
     left: 50%;
     margin-left: -50px;
     top: 50%;
-    margin-top: -50px;
+    margin-top: -30px;
 }
 
   /* ---- footer ---- */

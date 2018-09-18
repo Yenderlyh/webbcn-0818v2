@@ -43,7 +43,7 @@ a {
 body {
   color: #111;
   font-size: 16px;
-  line-height: 147%;
+  line-height: 100%;
   font-family: 'Concert One';
 }
 
@@ -139,9 +139,8 @@ h3 {
 .timer {
   display: inline-block;
   text-align: center;
-  font-size: 40px;
+  font-size: 18px;
 }
-
 
 /* Sections */
 
@@ -157,6 +156,7 @@ header .site-nav {
 .input-student {
   display: inline-block;
   position: relative;
+  margin: auto 0;
 }
 
 /* .input-student input:focus {
@@ -227,18 +227,27 @@ h3.container {
   padding-bottom: 10px;
 }
 
-.interests {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
 .interests li {
-  max-width: 75px;
-  flex: 1;
   text-align: center;
   margin: 0 5px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+.interests img {
+  max-width: 100px;
+}
+
+.interests {
+  color: black;
+}
+
+.work {
+  padding-bottom: 20px;
+}
+
+h3 a{
+  color: #3f51b5;
+  text-transform: uppercase;
 }
 
 section.experiments .container {

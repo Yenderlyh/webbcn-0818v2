@@ -1,4 +1,3 @@
-
 <head>
   <title>Francesca</title>
   <meta charset="utf-8">
@@ -14,14 +13,14 @@
     <h1>Francesca</h1>
     <nav>
       <a href="/">Homepage</a>
+      <a href="/students/francesca/">About Francesca</a>
       <a href="/students/francesca/interests">Interests</a>
       <a href="/students/francesca/experiments">Experiments</a>
     </nav>
     {{!-- <div class="timer"></div> --}}
   </header>
 
-
-  <div class="sub-header">
+  <div class="game">
     <label for="">Quick Jump</label>
     <div class="search">
       <input type="text" placeholder="Student name">
@@ -30,21 +29,19 @@
   </div>
 
   <main id="site-main">
-    <section class="profile">
-      <div class="presantation">
-        <img src="https://images.unsplash.com/photo-1463936575829-25148e1db1b8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7b2a0b01d0e292a6569901818e4fafd9&auto=format&fit=crop&w=2590&q=80"
-          alt="A beautiful picture of me" width="100%">
-        <div class="presentation-text">
-          <h2>Francesca</h2>
-          <p>Web developer from <em>Turin, Italy</em></p>
-        </div>
-      </div> 
-    </section>
-    <div class="quote">
-      <p>Aim high</p>
-      <p class="goal">Fly higher</p>
+    
+    <div id="interests" class="container">
+      <ul>
+        <li><img src="https://images.unsplash.com/photo-1517898717281-8e4385a41802?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3fae9d045f631e72d1f00740eb52ade0&auto=format&fit=crop&w=2550&q=80"
+            alt="A girl napping" class="wrong-answer"></li>
+        <li><img src="https://images.unsplash.com/photo-1514995428455-447d4443fa7f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6d3a7081424acd0c6fa99f2e541d5648&auto=format&fit=crop&w=900&q=60"
+            alt="Food" class="right-answer"></li>
+        <li><img src="https://images.unsplash.com/photo-1494913148647-353ae514b35e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=690fde360cf073d36a84808c5f655c0e&auto=format&fit=crop&w=2552&q=80"
+            alt="Two dogs on an amaca" class="wrong-answer"></li>
+      </ul>
     </div>
   </main>
+
   <footer id="site-footer">
     <div class="container">
       <p>Created by Francesca Ropolo</p>

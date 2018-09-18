@@ -4,32 +4,40 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="/students/maria-jose/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700,800" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 </head>
 
 <body>
-  <div class="block-color">
+  <div class="">
     <header role="banner">
-      <h1>Cohort 08 2018</h1>
+      <h1>Maria José H.R</h1>
+      <h4>Cohort 08 2018</h4>
+      {{!-- <hr>
       <nav>
         <a href="../index.html" class="homepage-button">Homepage</a>
+        <a href="../index.html" class="homepage-button">About</a>
+        <a href="../index.html" class="homepage-button">Expertise</a>
+        <a href="../index.html" class="homepage-button">Hobbies</a>
+        <a href="../index.html" class="homepage-button">Locations</a>
+        <div class="search">
+          <label for="Quick Jump"></label>
+          <div class="search-bar container">
+            <input type="text" placeholder="search">
+            <div class="search-results"></div>
+          </div>
+        </div>
         <div class="display-timer"></div>
       </nav>
+      <hr> --}}
     </header>
-    <div class="search">
-      <label for="Quick Jump"></label>
-      <div class="search-bar container">
-        <input type="text" placeholder="search">
-        <div class="search-results"></div>
-      </div>
-    </div>
   </div>
   <main>
-    <section class="profile container">
+    {{!-- <section class="profile container">
       <h2 class="student-name">Maria José</h2>
       <p>Web developer from <em>Málaga, Spain</em></p>
-    </section>
+    </section> --}}
 
     <section class="secondary-menu container">
       <div class="photo-menu">
@@ -98,12 +106,18 @@
     <section id="hobbies-section" class="hobbies-section">
       <div class="hobbies container">
         <h2>Hobbies</h2>
-        <ul>
-          <li>Ballet</li>
-          <li>Music</li>
-          <li>Food</li>
+        <ul class="hobbies-icons">
+          <li><img src="https://image.flaticon.com/icons/svg/708/708746.svg" alt="ballet icon"></li>
+          <li><img src="https://image.flaticon.com/icons/svg/937/937363.svg" alt="music icon"></li>
+          <li><img src="https://image.flaticon.com/icons/svg/857/857681.svg" alt="food icon"></li>
+          <li><img src="https://image.flaticon.com/icons/svg/1046/1046887.svg" alt="coffee icon"></li>
+          <li><img src="https://image.flaticon.com/icons/svg/738/738096.svg" alt="popcorn icon"></li>
         </ul>
       </div>
+    </section>
+
+    <section>
+      <iframe src="//lightwidget.com/widgets/e243351933a255e29c298487de6432a6.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
     </section>
 
     <section id="locations" class="container">
@@ -113,6 +127,25 @@
           <br>Looking for recommendations about new places to visit. Please write your recommendation in the comments
           below!</p>
       </div>
+      <form action="MAILTO:majohr89@gmail.com" method="POST" enctype="text/plain">
+        <div class="location-form">
+          <div>
+            <label for="name" >Name:</label>
+            <input class="field" type="text" id="name" name="user_name">
+          </div>
+          <div>
+            <label for="mail" placeholder="Your email">E-mail:</label>
+            <input class="field" type="email" id="mail" name="user_mail">
+          </div>
+          <div>
+            <label for="msg">Your suggestion:</label>
+            <textarea class="field" id="msg" name="user_message"></textarea>
+          </div>
+        </div>
+        <div class="button">
+          <button type="submit">Send me your message</button>
+        </div>
+      </form>
       <div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.911001584456!2d2.1881113151947527!3d41.39773910331652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2e4ddd5122f%3A0xfe5222819e3b6768!2sIronhack!5e0!3m2!1sen!2ses!4v1535062782177"
           width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe> </div>
