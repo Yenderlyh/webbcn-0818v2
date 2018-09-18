@@ -65,7 +65,7 @@ const main = (students) => {
     event.stopPropagation(event);
   });
 
-  document.body.addEventListener('keyup', () => {
+  document.body.addEventListener('keyup', (event) => {
     if (event.key === 'Escape') {
       searchResult.innerHTML = '';
     }

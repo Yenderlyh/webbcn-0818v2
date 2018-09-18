@@ -5,6 +5,7 @@
   </div>
   <p>{{event.date}}</p>
   <p>{{event.description}}</p>
+  <p>{{event.project.name}}</p>
   <form class="delete" action="/events/{{event.id}}/delete" method="POST">
     <button class="button danger">Delete</button>
   </form>

@@ -5,6 +5,22 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const data = require('../../data/events.js');
 const Event = require('../../models/events.js');
+const Project = require('../../models/project.js');
+
+function updateProject (projectName, index) {
+  return Event.findOne({ name: projectName })
+    .then((project) => {
+      if (!project) {
+        throw new Error('Unknown project ' + projectName);
+      }
+      project[index] = project._id;
+    });
+}
+
+function updateProjectIds (project) {
+  const promisesOfUpdatingProjectId = project.map((projectName, index) => updateProject(projectName, index));
+  return Promise.all(promisesOfUpdatingProjectId);
+}
 
 mongoose.connect(process.env.MONGODB_URI, {
   keepAlive: true,
@@ -14,6 +30,17 @@ mongoose.connect(process.env.MONGODB_URI, {
   .then(() => {
     console.log('Connected to Mongo!');
     return Event.remove({});
+  })
+  .then(() => {
+    const promisesOfUpdatingProject = data.map((project) => updateProjectIds(project));
+    return Promise.all(promisesOfUpdatingProject);
+  })
+  .then(() => {
+    console.log('Empty db');
+    return Project.findOne({ name: data[2].projects[0] })
+      .then((project) => {
+        data[2].projects[0] = project.id;
+      });
   })
   .then(() => {
     console.log('Empty db');

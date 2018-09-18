@@ -148,7 +148,6 @@ nav ul li a .sexto {
 /*Main*/
 body { 
     margin: 0; 
-    background-image: url("http://blog.visme.co/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-045.jpg")   
 }
 div.main{
     background-color:rgba(228, 190, 215, 0.274);
@@ -195,7 +194,6 @@ div.main{
   }
 
 section.banner div{
-    background-image: url();
     margin: 0 auto;
     color:darkslategray;
     text-align: center;

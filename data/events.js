@@ -9,7 +9,8 @@ const data = [{
 }, {
   name: 'Game Show',
   type: 'presentation',
-  date: '2018-09-07'
+  date: '2018-09-07',
+  projects: ['Space Invaders']
 }, {
   name: 'UX-UI',
   type: 'talk',
